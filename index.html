@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Virtual Microscope</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link rel="icon" href="microsope.jpg">
+	<style>
+		#cork {
+			mix-blend-mode: luminosity;
+			filter: contrast(1.25);
+		}
+	</style>
+</head>
+
+<body>
+	<div id="main">
+		<div id="lens">
+			<h1 style="position: absolute; left: 225px; font-size: 100pt; z-index: 3; color: red;"> &#9585;</h1>
+			<h1 style="position: absolute; left: 301px; font-size: 100pt; top: -76px; z-index: 3; color: red;"> &#9585;</h1>
+
+			<div id="slide1">
+				<img id="cork" />
+			</div>
+		</div>
+	</div>
+	<button id="zoom40">40x Zoom</button>
+	<button id="zoom300">300x Zoom</button>
+	<button id="zoom1000">1000x Zoom</button>
+	<button id="zoom5000">5000x Zoom</button>
+	<button id="reset">Reset</button>
+	<br>
+	<button id="orig">Cork</button>
+	<button id="diatom">Diatoms</button>
+	<button id="liver">Liver</button>
+	<button id="pollen">Mixed Pollen</button>
+	<br>
+	<button id="leaf">Leaf</button>
+	<button id="pond">Pond Water</button>
+	<button id="corm">Corm Stem</button>
+	<button id="cam">Camera</button>
+	<br>
+	<button id="flu">Influenza</button>
+	<button id="save">Take Screenshot</button>
+	<br>
+	<p style="color: white">Fine Adjustment Knob</p>
+	<input id="fine" type="range" value="5" min="0" max="8">
+	<p style="color: white">Coarse Adjustment Knob</p>
+	<input id="coarse" type="range" value="5" min="0" max="80">
+	<script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+html {
+  height: 100%;
+  width: 100%;
+	background: black;
+}
+#main{
+	text-align: center;
+	background-color: black;
+	height: 500px;
+	width: 500px;
+}
+button{
+	position: relative;
+	text-align: center;
+}
+#lens{
+	text-align: center;
+	height: 500px;
+	width: 500px;
+	left: 33vw;
+	border-radius: 50%;
+	background-clip: border-box;
+	background-color: white;
+	position: relative;
+	overflow: hidden;
+	z-index: 2;
+}
+#orig, #diatom, #liver{
+	text-align: center;
+}
+body{
+		text-align: center;
+}
