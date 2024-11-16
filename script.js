@@ -170,7 +170,7 @@ document.onkeydown = (e)=> {
 		document.getElementById("slide1").style.translate = `${b}px ${a}px 0px`;
 	}
 	document.getElementById("zoom").onchange = ()=> {
-		cork.style.scale = 0.2 * document.querySelector("#zoom").value;
+		document.querySelector("#slide1").style.scale = 0.2 * document.querySelector("#zoom").value;
 	}
 };
 var myimage, link;
