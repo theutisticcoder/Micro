@@ -228,34 +228,3 @@ function change(e){
 }
 var video;
 var cam = 0;
-document.getElementById("cam").onclick = ()=> {
-	cam++;
-	if(cam % 2==0){
-		document.getElementById("vid").remove();
-		document.getElementById("slide1").style.transform = "";
-		Array.from(document.getElementsByClassName("cork")).forEach(c=> {
-			c.hidden = false;
-		})
-	}
-	else{
-	navigator.mediaDevices
-	.getUserMedia({video: true, audio: false})
-	.then((stream) => {
-		video = document.createElement("video");
-		video.srcObject = stream;
-		video.id = "vid";
-		video.style.position = "absolute";
-		video.style.zIndex = "12"
-		video.style.height = "500px";
-		video.style.width = "500px";
-		video.autoplay = true;
-		document.getElementById("slide1").appendChild(video);
-		document.getElementbyId("slide1").style.transform = "scale3d(50,50,50)";
-		Array.from(document.getElementsByClassName("cork")).forEach(c=> {
-			c.hidden = true;
-		})
-	})
-	.catch((err) => {
-	});
-	}
-}
