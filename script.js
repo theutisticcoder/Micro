@@ -3,36 +3,6 @@ var lens = 0;
 
 var a = 0;
 var b = 0;
-for(var i = 0; i < 10; i++){
-	for(var x = 0; x < 10; x++){
-	cork = cork.cloneNode();
-		cork.classList.add("cork");
-		cork.src = "cork.jpeg";
-		cork.style.height = "10vh";
-		cork.style.width = "10vh";
-		cork.style.left = x*10 + "vh";
-		cork.style.top = i*10 + "vh";
-		cork.style.position = "absolute";
-		cork.style.zIndex = "5";
-		document.getElementById("slide1").appendChild(cork)
-	if(x % 2 === 0){
-		if(i % 2 === 0){
-		cork.style.rotate = "0 0 1 180deg";
-	}	
-		else{
-		cork.style.rotate = "0 0 1 90deg";
-	}
-}
-	else{
-		if(i % 2 === 0){
-		cork.style.rotate = "0 0 1 270deg";
-	}	
-		else{
-		cork.style.rotate = "0 0 1 0deg";
-	}
-}
-	}
-}
 document.getElementById("slide1").style.scale = "0.02 0.02 0.02";
 document.getElementById("reset").onclick = ()=> {
 	
