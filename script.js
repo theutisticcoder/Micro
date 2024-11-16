@@ -3,10 +3,10 @@ var lens = 0;
 
 var a = 0;
 var b = 0;
-document.getElementById("slide1").style.scale = "0.02 0.02 0.02";
+document.getElementById("slide1").style.scale = "0.2";
 document.getElementById("reset").onclick = ()=> {
 	
-	document.getElementById("slide1").style.scale = "0.02 0.02 0.02";
+	document.getElementById("slide1").style.scale = "0.2";
 	a = 0;
 	b = 0;
 	lens = 0;
@@ -14,22 +14,22 @@ document.getElementById("reset").onclick = ()=> {
 		document.getElementById("slide1").style.filter = `blur(${document.getElementById("fine").value}px)`;
 document.getElementById("zoom40").onclick = ()=> {
 	lens = 1;
-	document.getElementById("slide1").style.scale = "0.8 0.8 0.8";
+	document.getElementById("slide1").style.scale = "8";
 
 }
 document.getElementById("zoom300").onclick = ()=> {
 	lens = 2;
-	document.getElementById("slide1").style.scale = "6 6 6";
+	document.getElementById("slide1").style.scale = "60";
 
 }
 document.getElementById("zoom1000").onclick = ()=> {
 	lens = 3;
-	document.getElementById("slide1").style.scale = "20 20 20";
+	document.getElementById("slide1").style.scale = "200";
 
 }
 document.getElementById("zoom5000").onclick = ()=> {
 	lens = 4;
-	document.getElementById("slide1").style.scale = "100 100 100";
+	document.getElementById("slide1").style.scale = "1000";
 	Array.from(document.getElementsByClassName("cork")).forEach(c=> {
 		c.style.imageRendering = "sharp-edges";
 	})
