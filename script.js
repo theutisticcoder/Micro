@@ -169,6 +169,9 @@ document.onkeydown = (e)=> {
 		b-= 5;
 		document.getElementById("slide1").style.translate = `${b}px ${a}px 0px`;
 	}
+	document.getElementById("zoom").onchange = ()=> {
+		cork.style.scale = 0.2 * document.querySelector("#zoom").value;
+	}
 };
 var myimage, link;
 document.getElementById("save").onclick = ()=> {
